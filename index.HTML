@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brew & Beans | Coffee & Good Vibes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">☕ Brew & Beans</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 Cart <span id="cart-count">0</span>
+        </button>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO BREW & BEANS</p>
+
+            <h1>
+                Coffee made for
+                <span>good moments.</span>
+            </h1>
+
+            <p>
+                Fresh coffee, delicious food and a cozy place
+                to relax with your people.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="primary-btn">View Menu</a>
+                <button class="secondary-btn" onclick="openCart()">
+                    Order Now
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+            <img
+                src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=80"
+                alt="Coffee shop">
+        </div>
+
+        <div class="about-text">
+
+            <p class="section-label">OUR STORY</p>
+
+            <h2>A little coffee.<br>A lot of happiness.</h2>
+
+            <p>
+                Brew & Beans is your neighborhood café for freshly
+                brewed coffee, tasty snacks and relaxed conversations.
+            </p>
+
+            <p>
+                Whether you're catching up with friends or working
+                on your next big idea, there's always a seat waiting
+                for you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENU -->
+    <section class="menu-section" id="menu">
+
+        <div class="section-heading">
+            <p class="section-label">OUR MENU</p>
+            <h2>Something for everyone.</h2>
+            <p>Freshly prepared. Always delicious.</p>
+        </div>
+
+
+        <div class="menu-grid">
+
+            <!-- ITEM 1 -->
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=80"
+                    alt="Cappuccino">
+
+                <div class="food-info">
+
+                    <div class="food-title">
+                        <h3>Cappuccino</h3>
+                        <span>₹140</span>
+                    </div>
+
+                    <p>Rich espresso topped with creamy foam.</p>
+
+                    <button onclick="addToCart('Cappuccino', 140)">
+                        Add to order +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 2 -->
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80"
+                    alt="Cold Coffee">
+
+                <div class="food-info">
+
+                    <div class="food-title">
+                        <h3>Cold Coffee</h3>
+                        <span>₹160</span>
+                    </div>
+
+                    <p>Cold, creamy and perfect for summer.</p>
+
+                    <button onclick="addToCart('Cold Coffee', 160)">
+                        Add to order +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 3 -->
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=700&q=80"
+                    alt="Pizza">
+
+                <div class="food-info">
+
+                    <div class="food-title">
+                        <h3>Margherita Pizza</h3>
+                        <span>₹220</span>
+                    </div>
+
+                    <p>Classic pizza with tomato and mozzarella.</p>
+
+                    <button onclick="addToCart('Margherita Pizza', 220)">
+                        Add to order +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 4 -->
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80"
+                    alt="Sandwich">
+
+                <div class="food-info">
+
+                    <div class="food-title">
+                        <h3>Grilled Sandwich</h3>
+                        <span>₹150</span>
+                    </div>
+
+                    <p>Crispy grilled sandwich with fresh veggies.</p>
+
+                    <button onclick="addToCart('Grilled Sandwich', 150)">
+                        Add to order +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 5 -->
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80"
+                    alt="Brownie">
+
+                <div class="food-info">
+
+                    <div class="food-title">
+                        <h3>Chocolate Brownie</h3>
+                        <span>₹100</span>
+                    </div>
+
+                    <p>Warm, soft and loaded with chocolate.</p>
+
+                    <button onclick="addToCart('Chocolate Brownie', 100)">
+                        Add to order +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 6 -->
+            <div class="food-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80"
+                    alt="Donut">
+
+                <div class="food-info">
+
+                    <div class="food-title">
+                        <h3>Chocolate Donut</h3>
+                        <span>₹90</span>
+                    </div>
+
+                    <p>Soft donut covered in chocolate glaze.</p>
+
+                    <button onclick="addToCart('Chocolate Donut', 90)">
+                        Add to order +
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div>
+            <p class="section-label">VISIT US</p>
+
+            <h2>Come grab a coffee.</h2>
+
+            <p>
+                📍 Model Town, Kapurthala, Punjab
+            </p>
+
+            <p>
+                🕐 Mon – Sun: 10:00 AM – 10:00 PM
+            </p>
+
+            <p>
+                📞 +91 98765 43210
+            </p>
+        </div>
+
+        <div class="contact-buttons">
+
+            <a
+                href="https://maps.google.com"
+                target="_blank"
+                class="primary-btn">
+                📍 Find us
+            </a>
+
+            <a
+                href="https://wa.me/919876543210"
+                target="_blank"
+                class="whatsapp-btn">
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">☕ Brew & Beans</div>
+
+        <p>© 2026 Brew & Beans. All rights reserved.</p>
+
+    </footer>
+
+
+    <!-- CART POPUP -->
+    <div class="cart-overlay" id="cart-overlay">
+
+        <div class="cart">
+
+            <button class="close-cart" onclick="closeCart()">×</button>
+
+            <h2>Your Order 🛒</h2>
+
+            <div id="cart-items">
+                <p class="empty-cart">
+                    Your cart is empty.
+                </p>
+            </div>
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong>₹<span id="cart-total">0</span></strong>
+            </div>
+
+            <button
+                class="whatsapp-order"
+                onclick="orderOnWhatsApp()">
+
+                Order on WhatsApp 💬
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

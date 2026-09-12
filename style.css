@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #faf7f2;
+    color: #2b2118;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 75px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #faf7f2;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2b2118;
+    font-weight: 500;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+.cart-button {
+    border: none;
+    background: #2b2118;
+    color: white;
+
+    padding: 11px 18px;
+    border-radius: 30px;
+
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25,18,13,0.85),
+            rgba(25,18,13,0.25)
+        ),
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title,
+.section-label {
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    font-style: italic;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+
+    max-width: 520px;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn,
+.whatsapp-btn {
+    padding: 14px 24px;
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: white;
+    color: #2b2118;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: white;
+
+    border: 1px solid white;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 100px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+.about-text h2,
+.section-heading h2,
+.contact h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(35px, 4vw, 55px);
+
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #665a50;
+}
+
+
+/* MENU */
+
+.menu-section {
+    padding: 100px 7%;
+    background: white;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading > p:last-child {
+    color: #776b60;
+}
+
+.menu-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.food-card {
+    background: #faf7f2;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: transform 0.25s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+}
+
+.food-info {
+    padding: 22px;
+}
+
+.food-title {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-bottom: 10px;
+}
+
+.food-title h3 {
+    font-size: 19px;
+}
+
+.food-title span {
+    font-weight: 700;
+}
+
+.food-info p {
+    color: #776b60;
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+.food-info button {
+    width: 100%;
+
+    border: none;
+
+    background: #2b2118;
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+.food-info button:hover {
+    opacity: 0.85;
+}
+
+
+/* CONTACT */
+
+.contact {
+    padding: 100px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.contact h2 {
+    margin-bottom: 25px;
+}
+
+.contact p {
+    margin-bottom: 12px;
+
+    color: #665a50;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-buttons .primary-btn {
+    background: #2b2118;
+    color: white;
+}
+
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 40px 7%;
+
+    background: #2b2118;
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    opacity: 0.7;
+    font-size: 13px;
+}
+
+
+/* CART */
+
+.cart-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.55);
+
+    display: none;
+
+    justify-content: flex-end;
+
+    z-index: 1000;
+}
+
+.cart-overlay.active {
+    display: flex;
+}
+
+.cart {
+    background: white;
+
+    width: min(430px, 100%);
+
+    height: 100%;
+
+    padding: 30px;
+
+    overflow-y: auto;
+
+    position: relative;
+}
+
+.close-cart {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    border: none;
+    background: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.cart h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-info strong {
+    display: block;
+
+    margin-bottom: 5px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.quantity button {
+    width: 28px;
+    height: 28px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    background: #eee;
+}
+
+.empty-cart {
+    color: #888;
+}
+
+.cart-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 20px;
+
+    margin: 30px 0;
+}
+
+.whatsapp-order {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #25D366;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 600px;
+
+        padding: 60px 5%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+
+        padding: 70px 5%;
+
+        gap: 40px;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .menu-section {
+        padding: 70px 5%;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        padding: 70px 5%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .contact-buttons a {
+        text-align: center;
+    }
+
+    footer {
+        padding: 35px 5%;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+}
